@@ -1,6 +1,6 @@
 {
   "name": "properties-json-loader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "webpack properties-to-json loader based on properties",
   "main": "index.js",
   "repository": "https://github.com/aquariuslt/properties-json-loader",
