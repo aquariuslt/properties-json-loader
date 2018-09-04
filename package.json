@@ -1,0 +1,16 @@
+{
+  "name": "properties-json-loader",
+  "version": "0.0.1",
+  "description": "webpack properties-to-json loader based on properties",
+  "main": "index.js",
+  "repository": "https://github.com/aquariuslt/properties-json-loader",
+  "author": "Aquariuslt<superaquariuslt@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fancy-log": "^1.3.2",
+    "loader-utils": "^1.1.0",
+    "lodash": "^4.17.10",
+    "properties": "^1.2.1",
+    "schema-utils": "^1.0.0"
+  }
+}
