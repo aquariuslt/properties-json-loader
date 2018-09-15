@@ -32,6 +32,8 @@
     "webpack": "^4.19.0"
   },
   "jest": {
+    "verbose": true,
+    "testEnvironment": "node",
     "collectCoverage": true,
     "coverageDirectory": "<rootDir>/test/coverage",
     "collectCoverageFrom": [
