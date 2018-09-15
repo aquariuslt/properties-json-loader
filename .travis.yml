@@ -7,3 +7,12 @@ script: npm test
 # Submit Coverage Status to coveralls.io
 after_script:
 - cat ./test/coverage/lcov.info | ./node_modules/.bin/coveralls
+
+
+deploy:
+  provider: npm
+  email: 'superaquariuslt@gmail.com'
+  api_key: $NPM_AUTH_TOKEN
+  on:
+    tags: true
+    branch: release
