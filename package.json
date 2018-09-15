@@ -2,15 +2,40 @@
   "name": "properties-json-loader",
   "version": "0.0.2",
   "description": "webpack properties-to-json loader based on properties",
-  "main": "index.js",
+  "main": "src/loader.js",
   "repository": "https://github.com/aquariuslt/properties-json-loader",
   "author": "Aquariuslt<superaquariuslt@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
     "fancy-log": "^1.3.2",
     "loader-utils": "^1.1.0",
     "lodash": "^4.17.10",
     "properties": "^1.2.1",
     "schema-utils": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.1",
+    "@babel/plugin-transform-runtime": "7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "7.0.0",
+    "@babel/runtime": "7.0.0",
+    "@types/jest": "^23.3.2",
+    "@types/webpack": "^4.4.11",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "coveralls": "^3.0.2",
+    "jest": "^23.6.0",
+    "memory-fs": "^0.4.1",
+    "webpack": "^4.19.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "<rootDir>/test/coverage",
+    "collectCoverageFrom": [
+      "src/**/*.{js}"
+    ]
   }
 }

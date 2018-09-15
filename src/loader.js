@@ -1,5 +1,4 @@
 const _ = require('lodash');
-const path = require('path');
 const log = require('fancy-log');
 const properties = require('properties');
 const loaderUtils = require('loader-utils');
