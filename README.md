@@ -5,7 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/aquariuslt/properties-json-loader/badge.svg?branch=master)](https://coveralls.io/github/aquariuslt/properties-json-loader?branch=master)
 
 
-## Description
+## Introduction
 
 A webpack-loader based on [properties](https://www.npmjs.com/package/properties) .
 
@@ -25,14 +25,22 @@ Use properties parse [Options](https://github.com/gagle/node-properties#options)
 
 Then will return parsed properties json object.
 
-```
-{
-  test: /\.properties$/,
-  loader: 'properties-json-loader',
-  options: {
-    namespaces: true
-    // ... 
+```javascript
+module.exports = {
+  // ...
+  module: {
+    rules: [
+      // ...
+      {
+        test: /\.properties$/,
+          loader: 'properties-json-loader',
+          options: {
+            namespaces: true
+            // ... 
+          }
+      }
+    ]
   }
-},
+}
 ```
 

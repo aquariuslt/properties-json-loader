@@ -1,10 +1,13 @@
 import compiler from './compiler';
 
-test('# Expect default options will use namespaces ', async () => {
-  const stats = await compiler('test.properties');
-  const output = stats.toJson().modules[0].source;
+describe('properties-json-loader', () => {
 
-  const EXPECT_OUTPUT = `module.exports = {"test":{"key":"Test Key Label"}}`;
+  it('# should default options convert properties to flatten json', async () => {
+    const stats = await compiler('fixtures/sample.properties');
+    const output = stats.toJson().modules[0].source;
 
-  expect(output).toBe(EXPECT_OUTPUT);
+    const EXPECT_OUTPUT = `module.exports = {"test":{"key":"Test Key Label"}}`;
+
+    expect(output).toBe(EXPECT_OUTPUT);
+  });
 });

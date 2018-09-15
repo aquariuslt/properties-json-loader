@@ -2,10 +2,16 @@
   "name": "properties-json-loader",
   "version": "0.0.3",
   "description": "webpack properties-to-json loader based on properties",
-  "main": "src/loader.js",
+  "main": "lib/loader.js",
   "repository": "https://github.com/aquariuslt/properties-json-loader",
   "author": "Aquariuslt<superaquariuslt@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "webpack",
+    "webpack-loader",
+    "loader",
+    "properties"
+  ],
   "scripts": {
     "test": "jest"
   },
@@ -37,7 +43,7 @@
     "collectCoverage": true,
     "coverageDirectory": "<rootDir>/test/coverage",
     "collectCoverageFrom": [
-      "src/**/*.{js}"
+      "lib/**/*.{js}"
     ]
   }
 }

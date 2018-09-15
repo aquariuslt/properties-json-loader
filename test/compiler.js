@@ -1,6 +1,6 @@
 import path from 'path';
 import webpack from 'webpack';
-import memoryfs from 'memory-fs';
+import MemoryFileSystem from 'memory-fs';
 
 export default (fixture, options = {}) => {
   const compiler = webpack({
@@ -14,13 +14,14 @@ export default (fixture, options = {}) => {
       rules: [
         {
           test: /\.properties$/,
-          loader: path.resolve(__dirname, '../src/loader.js')
+          loader: path.resolve(__dirname, '../lib/loader.js')
         }
       ]
     }
   });
 
-  compiler.outputFileSystem = new memoryfs();
+  // noinspection JSValidateTypes
+  compiler.outputFileSystem = new MemoryFileSystem();
 
   return new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
