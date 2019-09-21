@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`properties-json-loader # should default options convert properties to flatten json. 1`] = `"module.exports = {\\"test\\":{\\"key\\":\\"Test key label\\"}}"`;
+
+exports[`properties-json-loader # should log error when parse non-well formatted properties file. 1`] = `null`;

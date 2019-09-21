@@ -1,25 +1,14 @@
-# IDEA
+## Jetbrains
+
 .idea
 *.iml
 
-# VSCode
-.vscode
 
-# Node
+## Node
 node_modules
-package-lock.json
 
-
-# Others
-.editorconfig
-
-# Logs
-*.log
-
-# Build & Distribution
-build
-dist
-
-# Test Report and Output
+## coverage
 coverage
-reports
+
+## Dist
+lib

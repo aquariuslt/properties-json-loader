@@ -1,6 +1,7 @@
-import path from 'path';
-import webpack from 'webpack';
-import MemoryFileSystem from 'memory-fs';
+import * as path from 'path';
+import * as webpack from 'webpack';
+import * as MemoryFileSystem from 'memory-fs';
+
 
 export default (fixture, options = {}) => {
   const compiler = webpack({
@@ -14,21 +15,19 @@ export default (fixture, options = {}) => {
       rules: [
         {
           test: /\.properties$/,
-          loader: path.resolve(__dirname, '../lib/loader.js')
+          loader: path.resolve(__dirname,'../src/index.ts')
         }
       ]
     }
   });
 
-  // noinspection JSValidateTypes
   compiler.outputFileSystem = new MemoryFileSystem();
 
-  return new Promise((resolve, reject) => {
+  return new Promise<webpack.Stats>((resolve, reject) => {
     compiler.run((err, stats) => {
       if (err || stats.hasErrors()) {
         reject(err);
       }
-
       resolve(stats);
     });
   });
