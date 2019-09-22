@@ -39,7 +39,9 @@ jobs:
           yarn test
           yarn build
       - name: Semantic Release
-        run: npx semantic-release
+        run: |
+          yarn global add semantic-release
+          semantic-release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
