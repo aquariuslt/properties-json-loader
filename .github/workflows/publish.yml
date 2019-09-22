@@ -6,24 +6,8 @@ on:
       - master
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: SCM
-        uses: actions/checkout@v1
-      - name: Setup Node Environment
-        uses: actions/setup-node@v1
-        with:
-          node-version: 10
-      - name: Node CI
-        run: |
-          yarn install
-          yarn test
-          yarn build
 
   publish-npm:
-    needs:
-      - build
     runs-on: ubuntu-latest
     steps:
       - name: SCM
@@ -32,14 +16,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10
-          registry-url: https://registry.npmjs.org/
       - name: Node CI
         run: |
           yarn install
           yarn test
           yarn build
       - name: Semantic Release
-        run: yarn release
+        run: |
+          yarn release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
