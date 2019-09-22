@@ -7,7 +7,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/aquariuslt/properties-json-loader.svg)](https://github.com/aquariuslt/properties-json-loader/issues)
 [![GitHub license](https://img.shields.io/github/license/aquariuslt/properties-json-loader.svg)](https://github.com/aquariuslt/properties-json-loader/blob/master/LICENSE)
 [![Dependencies Status](https://david-dm.org/aquariuslt/properties-json-loader.svg)](https://david-dm.org/aquariuslt/properties-json-loader)
-
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 ## Introduction
 
