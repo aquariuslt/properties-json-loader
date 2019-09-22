@@ -38,6 +38,7 @@ module.exports = {
       {
         test: /\.properties$/,
           loader: 'properties-json-loader',
+          // use `properties` options
           options: {
             namespaces: true
             // ... 
