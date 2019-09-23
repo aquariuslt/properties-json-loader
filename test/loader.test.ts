@@ -22,5 +22,5 @@ describe('properties-json-loader', () => {
     }
 
     done();
-  });
+  },20000);
 });
