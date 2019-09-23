@@ -2,7 +2,6 @@ import * as path from 'path';
 import * as webpack from 'webpack';
 import * as MemoryFileSystem from 'memory-fs';
 
-
 export default (fixture, options = {}) => {
   const compiler = webpack({
     context: __dirname,
@@ -15,12 +14,11 @@ export default (fixture, options = {}) => {
       rules: [
         {
           test: /\.properties$/,
-          loader: path.resolve(__dirname,'../src/index.ts')
+          loader: path.resolve(__dirname, '../src/index.ts')
         }
       ]
     }
   });
-
   compiler.outputFileSystem = new MemoryFileSystem();
 
   return new Promise<webpack.Stats>((resolve, reject) => {
@@ -31,5 +29,4 @@ export default (fixture, options = {}) => {
       resolve(stats);
     });
   });
-}
-
+};
