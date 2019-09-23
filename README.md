@@ -49,3 +49,6 @@ module.exports = {
 }
 ```
 
+## Releases & ChangeLog
+
+See [Release Notes](https://github.com/aquariuslt/properties-json-loader/releases)
