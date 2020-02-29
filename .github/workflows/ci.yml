@@ -1,28 +1,23 @@
 name: ci
 
-on: [push]
+on: [push, pull_request]
+
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x]
-
     steps:
       - name: SCM
-        uses: actions/checkout@v1
-      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/checkout@v2
+      - name: Setup Node Environment
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: Yarn install, build, and test
+          node-version: 12
+      - name: Install Dependencies and Build
         run: |
-          yarn install
-          yarn build
-          yarn test
+          yarn
+          yarn test:cov
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1.0.0
+        uses: codecov/codecov-action@v1
         with:
           token: ${{secrets.CODECOV_TOKEN}}
           file: ./reports/coverage/lcov.info

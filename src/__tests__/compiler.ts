@@ -14,7 +14,7 @@ export default (fixture, options = {}) => {
       rules: [
         {
           test: /\.properties$/,
-          loader: path.resolve(__dirname, '../src/index.ts')
+          loader: path.resolve(__dirname, '../index.ts')
         }
       ]
     }

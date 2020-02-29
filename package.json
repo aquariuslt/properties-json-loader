@@ -2,7 +2,8 @@
   "name": "properties-json-loader",
   "version": "2.2.0",
   "description": "webpack properties-to-json loader based on properties",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": "https://github.com/aquariuslt/properties-json-loader",
   "author": "Aquariuslt<superaquariuslt@gmail.com>",
   "license": "MIT",
@@ -13,8 +14,10 @@
     "properties"
   ],
   "scripts": {
+    "prebuild": "rimraf dist",
     "build": "tsc",
     "test": "jest",
+    "test:cov": "jest --coverage",
     "release": "semantic-release"
   },
   "dependencies": {
@@ -35,6 +38,7 @@
     "debug": "4.1.1",
     "jest": "25.1.0",
     "memory-fs": "0.5.0",
+    "rimraf": "^3.0.0",
     "semantic-release": "17.0.4",
     "ts-jest": "25.2.1",
     "ts-node": "8.6.2",
@@ -48,28 +52,18 @@
       "js",
       "json"
     ],
-    "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/src/$1"
-    },
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
     "collectCoverageFrom": [
-      "<rootDir>/src/**/*.ts"
+      "<rootDir>/src/*.ts",
+      "!<rootDir>/src/__tests__/**/*.ts"
     ],
     "testMatch": [
-      "<rootDir>/test/**/*.test.ts"
+      "<rootDir>/src/**/*.test.ts"
     ],
     "testEnvironment": "node",
-    "collectCoverage": true,
     "coverageDirectory": "<rootDir>/reports/coverage"
-  },
-  "prettier": {
-    "semi": true,
-    "arrowParens": "always",
-    "proseWrap": "never",
-    "singleQuote": true,
-    "printWidth": 120
   },
   "release": {
     "plugins": [
@@ -83,7 +77,9 @@
         {
           "assets": [
             "docs",
-            "package.json"
+            "package.json",
+            "README.md",
+            "CHANGELOG.md"
           ],
           "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
         }

@@ -15,7 +15,6 @@ yarn.lock
 
 # Build & Distribution
 build
-dist
 
 # Test Report and Output
 coverage
@@ -29,8 +28,6 @@ reports
 src
 tsconfig.json
 
-# test
-test
 
 # github workflow
 .github
