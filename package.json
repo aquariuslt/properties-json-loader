@@ -38,7 +38,7 @@
     "@types/node": "12.12.31",
     "@types/webpack": "4.41.21",
     "debug": "4.1.1",
-    "jest": "26.3.0",
+    "jest": "26.4.0",
     "memory-fs": "0.5.0",
     "prettier": "2.0.5",
     "rimraf": "3.0.2",
