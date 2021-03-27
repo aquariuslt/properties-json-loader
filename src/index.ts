@@ -18,6 +18,7 @@ export default function propertyJsonLoader(source: string) {
   } catch (e) {
     throw e;
   }
+
   const esModule =
     typeof options.esModule !== 'undefined' ? options.esModule : true;
 
@@ -25,7 +26,8 @@ export default function propertyJsonLoader(source: string) {
     ES_MODULE_EXPORT_PREFIX :
     MODULE_EXPORTS_PREFIX;
 
-  return `${exportPrefix}${JSON.stringify(content)}`;
+
+  return `${exportPrefix} ${JSON.stringify(content)}`;
 }
 
 

@@ -7,8 +7,7 @@ export default (fixture, options = {}, config: any = {}) => {
     entry: path.resolve(__dirname, fixture),
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: 'bundle.js',
-      chunkFilename: 'bundle.js'
+      filename: 'bundle.js'
     },
     module: {
       rules: [

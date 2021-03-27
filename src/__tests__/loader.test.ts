@@ -2,6 +2,7 @@ import * as webpack from 'webpack';
 import * as path from 'path';
 import * as fs from 'fs';
 import compile from './compile';
+import execute from './execute';
 
 const readOutputAsset = (stats: webpack.Stats, assetFilename = 'bundle.js') => {
   const outputPath = stats.compilation.outputOptions.path;
@@ -25,13 +26,12 @@ describe('properties-json-loader', () => {
       esModule: true
     });
 
+    const output = execute(readOutputAsset(stats));
 
-    const output = readOutputAsset(stats);
 
+    const EXPECT_OUTPUT = `{"test":{"key":"Test key label"}}`;
 
-    const EXPECT_OUTPUT = `module.exports = {"test":{"key":"Test key label"}}`;
-
-    expect(output).toBe(EXPECT_OUTPUT);
+    expect(JSON.stringify(output)).toBe(EXPECT_OUTPUT);
     expect(output).toMatchSnapshot();
     done();
   });
