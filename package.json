@@ -33,7 +33,7 @@
   "devDependencies": {
     "@semantic-release/changelog": "5.0.1",
     "@semantic-release/git": "9.0.1",
-    "@types/jest": "27.0.2",
+    "@types/jest": "27.0.3",
     "@types/loader-utils": "2.0.3",
     "@types/node": "16.11.7",
     "@types/webpack": "5.28.0",
