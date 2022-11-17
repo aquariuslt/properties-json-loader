@@ -1,6 +1,6 @@
 {
   "name": "properties-json-loader",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "webpack properties-to-json loader based on properties",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
