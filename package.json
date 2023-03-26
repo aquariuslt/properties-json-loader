@@ -31,7 +31,7 @@
     "schema-utils": "^3.0.0"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "6.0.2",
+    "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@types/jest": "27.5.2",
     "@types/loader-utils": "2.0.3",
