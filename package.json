@@ -39,7 +39,7 @@
     "@types/webpack": "5.28.1",
     "debug": "4.3.4",
     "jest": "26.6.3",
-    "memfs": "3.5.1",
+    "memfs": "3.5.2",
     "memory-fs": "0.5.0",
     "prettier": "2.8.8",
     "rimraf": "5.0.1",
