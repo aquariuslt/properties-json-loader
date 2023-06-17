@@ -1,3 +1,10 @@
+## [2.3.6](https://github.com/aquariuslt/properties-json-loader/compare/v2.3.5...v2.3.6) (2023-06-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency schema-utils to v3.3.0 ([ef179e4](https://github.com/aquariuslt/properties-json-loader/commit/ef179e4bedc765414b5288fb301d71344c83794e))
+
 ## [2.3.5](https://github.com/aquariuslt/properties-json-loader/compare/v2.3.4...v2.3.5) (2023-06-10)
 
 
