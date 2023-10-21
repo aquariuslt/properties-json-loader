@@ -1262,10 +1262,10 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.12.tgz#d70faba7039d5fca54c83c7dbab41051d2b6f6cb"
   integrity sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==
 
-"@types/loader-utils@2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@types/loader-utils/-/loader-utils-2.0.4.tgz#f1c9dd27392f163ee92394454563286dfc6e4778"
-  integrity sha512-I71X8yySVQW6DuXr78/McC+enpUYQ68JxAYlgVyuMvl5mb7jFUZpFAu1qURZcwvbITXwxPnrA7hbV0W3HHsbbg==
+"@types/loader-utils@2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@types/loader-utils/-/loader-utils-2.0.5.tgz#df199c88d2139ceeeeac861c704bc37b08506537"
+  integrity sha512-KBwEnl6biBRJ1MapcgVmkC/nkk7adZinKF1D6VscHviaumX8g/pbxyjBCNfmqnA6LzQ7NnomkdPazUDLTYEUvA==
   dependencies:
     "@types/node" "*"
     "@types/webpack" "^4"
