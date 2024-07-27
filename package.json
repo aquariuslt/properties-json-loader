@@ -37,7 +37,7 @@
     "@types/loader-utils": "2.0.6",
     "@types/node": "20.14.12",
     "@types/webpack": "5.28.5",
-    "debug": "4.3.5",
+    "debug": "4.3.6",
     "jest": "26.6.3",
     "memfs": "4.9.4",
     "memory-fs": "0.5.0",
